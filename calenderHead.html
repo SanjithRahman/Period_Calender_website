@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Here is your  calender</title>
+
+    <link rel="stylesheet" href="calenderstyle.css">
+    <script>
+      function printContent(){
+        var restorepage=document.body.innerHTML;
+        window.print();
+        document.body.innerHTML=restorepage;
+      }
+    </script>
+  </head>
+  <body>
+    
+  <section class="firstSection">
+    <div id="container">
+      <div id="header">
+        <div id="monthDisplay"></div>
+        <div>
+          <button id="backButton">Back</button>
+          <button id="nextButton">Next</button>
+        </div>
+      </div>
+
+      <div id="weekdays">
+        <div>Sunday</div>
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
+      </div>
+
+      <div id="calendar"></div>
+    </div>
+
+    <div id="newEventModal">
+      <h2>New Event</h2>
+
+      <input id="eventTitleInput" placeholder="Event Title" />
+
+      <button id="saveButton">Save</button>
+      <button id="cancelButton">Cancel</button>
+    </div>
+
+    <div id="deleteEventModal">
+      <h2>Event</h2>
+
+      <p id="eventText"></p>
+
+      <button id="deleteButton">Delete</button>
+      <button id="closeButton">Close</button>
+    </div>
+
+    <div id="modalBackDrop"></div>
+    <button class="button"  id= "btnzzz" >BackToHomepage</button>
+          <br>
+          <br>
+          <br>
+          <button  class ="button" id="btnzz" onclick="printContent()">Print Calender</button>
+          <script>
+              let my_url="http://127.0.0.1:5500";
+              document.getElementById("btnzzz").onclick=function(){
+                  window.location.replace(my_url);
+              }
+          </script>
+  </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Period Calculator</title>
+</head>
+<body>
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="logo"><img src="img/logo.jpeg" alt="logo"></div>
+            <li><a href="#home"> Home</a></li>
+            <li><a href="#about"> About us  </a></li>
+            <li><a href="#services"> Shop product</a></li>
+            <li><a href="#tips "> Tips and advice</a></li>
+        </ul>
+        <div class="rightnav">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">Search</button>
+        </div>
+    </nav>
+    <section class ="background firstSection">
+        <div class="box-main">
+        <div class="firstHalf">
+            <p class="text-big">Period Tracker</p>
+            <p class="text-small">Once upon a time people used the stars for navigation and thought the earth was flat.
+                 We’re better than that now. Thanks to modern science (namely period trackers), knowing exactly when to throw an extra Tampax or two into your bag doesn’t have to be a complete shot in the dark anymore.
+                 Simply punch your info into our period cycle tracker to see when you might be feeling that PMS bloat, when you can expect your period, and when you’re the most fertile during ovulation.
+            </p>
+            <div class ="buttons">
+                <button class="btn" >Login</button>
+                <button class="btn">Sign-up</button>
+                
+            </div>
+        </div>
+        <div class="secondHalf">
+            <img src="img/calulator.png" alt="period image">
+        </div>
+        </div>
+
+    </section>
+    <section class="secRight">
+        <div class="paras">
+        <p class="sectionTag text-big">
+            More about Periods</p>
+        <p class="sectionSubTag-text-small">. How do menstrual calculators work? Glad you asked. Basically, your body runs on a four-part “menstrual cycle” — and while you might assume that phrase means just the week of bleeding, in actuality, your menstrual cycle also refers to the weeks you don’t bleed. Your body is still grinding and putting in work — it’s not like your reproductive system just goes all-out the one week you bleed. You start with the menstrual cycle (your period, when the lining of your uterus sheds), followed by the follicular phase (when the follicles in your ovaries mature and get ready for the prime time: ovulation), then comes (you guessed it) ovulation (when the egg is released), followed finally by the luteal phase (when the egg makes its way down your fallopian tubes and gets ready to bleed).
+
+            Knowing this, you can track your period and your cycle. Voila!The average length that people usually go by is 28 days, but anywhere from 21 to 35 days is normal too, so don’t stress if you tend to be on the earlier or later side, as long as it’s consistent for your bod. If you’re on birth control, this can also help give you a more stable idea of your cycle, as birth control regulates your period a bit better.
+            
+            But whether your period is three days, five, or seven days, whether it comes every month or more like every month-ish, you can still use a period calculator to better learn your cycle.   </p>
+            </div>
+            <div class="thumbnail">
+            <img src="img/images.jpeg" alt="tracker image" class="imgFluid">
+        </div>
+        </section>
+        <section class="secLeft">
+            <div class="paras">
+            <p class="sectionTag text-big">How to Use a Period Tracker?????
+                </p>
+            <p class="sectionSubTag-text-small"> Simply input the length of your average period and the length of your last period, and let the period calculator do the rest.
+            
+                Pop in the date your last period began, the length of time it lasted, and the average length of your cycle to get a better idea of when you can reasonably expect your next period </p>
+                </div>
+                <div class="howtodoimage">
+                    <img src="img/thingstokeep.jpg" alt="howtodo image" class="imgFluid">
+                </div>
+                
+            </section>
+            
+    <section class="tracker">
+        <h2 class ="text-center">1.WHEN DID YOUR LAST PERIOD START??</h2>
+        <div class="calender">
+            <form>
+                <br>
+                <br>
+                <br>
+
+                <input type="date">
+
+            </form>
+            
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <h1>2.HOW MANY DAYS YOUR PERIOD LAST</h1>
+            <div class="card">
+                <button onclick="decrement()">-</button>
+                <h2 id="root"></h2>
+                <button onclick="increment()">+</button>
+            </div>
+        </div>
+        <script>
+            var data=0;
+            document.getElementById("root").innerText=data;
+            function decrement(){
+                data=data-1;
+                document.getElementById("root").innerText=data;
+            }
+            function increment(){
+                data=data+1;
+                document.getElementById("root").innerText=data;
+
+            }
+        </script>
+        
+            <h1>3.HOW LONG IS YOUR MENSTRUAL CYCLE??</h1>
+            <div class="card1">
+                <button onclick="decrement1()">-</button>
+                <h2 id="root1"></h2>
+                <button onclick="increment1()">+</button>
+            </div>
+        
+        <script>
+            var data1=0;
+            document.getElementById("root1").innerText=data1;
+            function decrement1(){
+                data1=data1-1;
+                document.getElementById("root1").innerText=data1;
+            }
+            function increment1(){
+                data1=data1+1;
+                document.getElementById("root1").innerText=data1;
+
+            }
+        </script>
+        
+
+    </section>
+    <section class="end">
+        <div class="caution">
+            <p class="CautionTag">Please note that this is an assessment of your menstrual cycle only.</p>
+            <button class="button"  id= "btnzzz" >Track period</button>
+            <script>
+                let my_url="http://127.0.0.1:5500/calenderHead.html";
+                document.getElementById("btnzzz").onclick=function(){
+                    window.location.replace(my_url);
+                }
+            </script>
+        </div>
+    </section>
+   
+</body>
+</html>
